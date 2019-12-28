@@ -45,6 +45,18 @@ Rect::Rect(int x, int y, int height, int width, int r, int g, int b, int o) {
 	colorData[2] = b;
 	colorData[3] = o;
 }
+
+
+bool Rect::collidesWith(Rect& obj) {
+	if (x() + width() >= obj.x() && obj.x() + obj.width() >= x()) { // collision on x axis
+		if (y() + height() >= obj.y() && obj.y() + obj.height() >= y()) { // collision on y axis
+			return true;
+		}
+	}	
+	return false;
+}
+
+
 int& Rect::x() { return _rect.x; }
 int& Rect::y() { return _rect.y; }
 int& Rect::width() { return _rect.w; }

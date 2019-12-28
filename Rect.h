@@ -18,6 +18,8 @@ public:
 	Rect(int x, int y, int height, int width, int r, int g, int b);
 	Rect(int x, int y, int height, int width, int r, int g, int b, int o);
 
+	bool collidesWith(Rect& rect);
+
 	//size and position
 	int& x();
 	int& y();

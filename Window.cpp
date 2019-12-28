@@ -21,7 +21,7 @@ Window::Window(const std::string title, int width, int height, int x, int y) : _
 		SDL_WINDOW_SHOWN);
 
 	_renderer = SDL_CreateRenderer(_window, -1, SDL_RENDERER_SOFTWARE);
-	SDL_SetRenderDrawColor(_renderer, 255, 255, 255, 255);
+	SDL_SetRenderDrawColor(_renderer, background[0], background[1], background[2], background[3]);
 	SDL_RenderClear(_renderer);
 }
 Window::~Window(){
@@ -35,6 +35,18 @@ void Window::setPos(int x, int y) {
 }
 void Window::getPos(int* x, int* y) {
 	SDL_GetWindowPosition(_window, x, y);
+}
+void Window::show() {
+	SDL_ShowWindow(_window);
+}
+void Window::hide() {
+	SDL_HideWindow(_window);
+}
+int* Window::BackgroundColor() {
+	return background;
+}
+const int* Window::BackgroundColor() const{
+	return background;
 }
 
 
@@ -60,19 +72,9 @@ void Window::present() {
 	SDL_RenderPresent(_renderer);
 }
 void Window::clearRenderer() {
-	SDL_SetRenderDrawColor(_renderer, 255, 255, 255, 255);
+	SDL_SetRenderDrawColor(_renderer, background[0], background[1], background[2], background[3]);
 	SDL_RenderClear(_renderer);
 }
-/*void Window::show(bool condition) {
-	if (condition) {
-		SDL_ShowWindow(_window);
-	}
-	else {
-		SDL_HideWindow(_window);
-	}
-}*/
-
-
 
 
 
