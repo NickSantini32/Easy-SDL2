@@ -73,7 +73,7 @@ THIS IS A VERY EARLY VERSION OF THE PRODUCT
     Usage is very similar to the vector at function and is as follows:
     Keep in mind these all are methods, not public data, so don't forget your parentheses
     Example:
-    >rect1.x() = 5;
+    >rect1.x() = 5;  
     >int val = rect1.x();
     
 	- size and position  
