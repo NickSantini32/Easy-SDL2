@@ -4,7 +4,7 @@ A wrapper class for the SDL2 graphics library to make it more approachable for b
 THIS DOCUMENT IS A WORK IN PROGRESS AND IS SUBJECT TO CHANGE AS MORE FEATURES ARE IMPLEMENTED
 THIS IS A VERY EARLY VERSION OF THE PRODUCT
 
-##Windows:
+## Windows:
   - Creation:
     - To create a window you can call one of two constructors with the given parameters
 
@@ -49,7 +49,7 @@ THIS IS A VERY EARLY VERSION OF THE PRODUCT
       - Put at the end of your loop
 
 
-##Rectangles (Rects):
+## Rectangles (Rects):
   - Creation:
     - NOTE: All r, g, b, and opacity values must be between 0 and 255
     - Rect()
