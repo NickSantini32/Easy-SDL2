@@ -4,21 +4,21 @@ A wrapper class for the SDL2 graphics library to make it more approachable for b
 THIS DOCUMENT IS A WORK IN PROGRESS AND IS SUBJECT TO CHANGE AS MORE FEATURES ARE IMPLEMENTED  
 THIS IS A VERY EARLY VERSION OF THE PRODUCT
 
-## Windows:
+## Windows
   - Creation:
-    - To create a window you can call one of two constructors with the given parameters
+    To create a window you can call one of two constructors with the given parameters  
 
-    Window(string title, int width, int height)
-    Window(string title, int width, int height, int x, int y)
+    Window(string title, int width, int height)  
+    Window(string title, int width, int height, int x, int y)  
 
-    - Example:
-    Window testWin("Test", 400, 400);
+    Example:  
+    Window testWin("Test", 400, 400);  
 
-    - If no x and y values are passed, the window will be centered.
-    - To make a window slightly off center, adjust the window position using the setPos member function immediately after construction
+    If no x and y values are passed, the window will be centered.  
+    To make a window slightly off center, adjust the window position using the setPos member function immediately after construction  
 
   - Destruction:
-    - Destruction is handled, you may delete windows as any other stack variable
+      Destruction is handled, you may delete windows as any other stack variable  
 
   - Member Functions:
   - Size and Position
@@ -49,7 +49,7 @@ THIS IS A VERY EARLY VERSION OF THE PRODUCT
       - Put at the end of your loop
 
 
-## Rectangles (Rects):
+## Rectangles (Rects)
   - Creation:
     - NOTE: All r, g, b, and opacity values must be between 0 and 255
     - Rect()
