@@ -74,7 +74,7 @@ THIS IS A VERY EARLY VERSION OF THE PRODUCT
     Keep in mind these all are methods, not public data, so don't forget your parentheses
     Example:
     	>rect1.x() = 5;  
-   	>int val = rect1.x();
+       	>int val = rect1.x();  
     
 	- size and position  
     	int& x()  
