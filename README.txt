@@ -69,9 +69,9 @@ THIS IS A VERY EARLY VERSION OF THE PRODUCT
       returns true if two rects are inside of each other or touching, false if not
       
     - __Accessing and Mutating Member Variables__  
-    All of the following methods return an integer reference to their respective values
-    Usage is very similar to the vector at function and is as follows:
-    Keep in mind these all are methods, not public data, so don't forget your parentheses
+    All of the following methods return an integer reference to their respective values  
+    Usage is very similar to the vector at function and is as follows:  
+    Keep in mind these all are methods, not public data, so don't forget your parentheses  
     Example:
     	>rect1.x() = 5;  
        	>int val = rect1.x();  
