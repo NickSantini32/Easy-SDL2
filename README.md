@@ -5,19 +5,19 @@ THIS DOCUMENT IS A WORK IN PROGRESS AND IS SUBJECT TO CHANGE AS MORE FEATURES AR
 THIS IS A VERY EARLY VERSION OF THE PRODUCT
 
 ## Windows
-  - Creation:
+  - Creation:  
     To create a window you can call one of two constructors with the given parameters  
 
     Window(string title, int width, int height)  
     Window(string title, int width, int height, int x, int y)  
 
     Example:  
-    Window testWin("Test", 400, 400);  
+      Window testWin("Test", 400, 400);  
 
     If no x and y values are passed, the window will be centered.  
     To make a window slightly off center, adjust the window position using the setPos member function immediately after construction  
 
-  - Destruction:
+  - Destruction:  
       Destruction is handled, you may delete windows as any other stack variable  
 
   - Member Functions:
