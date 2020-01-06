@@ -1,4 +1,4 @@
-## Easy-SDL2
+# Easy-SDL2
 A wrapper class for the SDL2 graphics library to make it more approachable for beginner and intermediate developers
 
 THIS DOCUMENT IS A WORK IN PROGRESS AND IS SUBJECT TO CHANGE AS MORE FEATURES ARE IMPLEMENTED
