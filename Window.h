@@ -10,12 +10,16 @@ class Window{
 private:
 	SDL_Window* _window;
 	SDL_Renderer* _renderer;
-	int _width, _height;
+	SDL_Event _event;
+	int _width, _height, _x, _y;
+	int mouseX, mouseY;
 	std::string _title;
 	int background[4] = {255,255,255,255};
 
 	void clearRenderer();
 	void present();
+
+	static bool check8Bit(int num);
 
 public:
 	Window(const std::string title, int width, int height); //will be centered automatically
@@ -25,16 +29,38 @@ public:
 	//Window Properties
 	void setPos(int x, int y); // Sets the position of the window with the origin at the top left
 							   //Pass SDL_WINDOWPOS_CENTERED as x or y to be centered on that axis
-	void getPos(int* x, int* y); // Fills parameters with X and Y coords of window
+	const int getX() const;
+	const int getY() const;
+	void setSize(int w, int h);
+	const int getWidth() const;
+	const int getHeight() const;
 	void hide();
 	void show();
-	int* BackgroundColor(); //returns a pointer to an array of size 4 containing r, g, b, and opacity of background
-	const int* BackgroundColor() const;
+
+	//background color setters
+	void setR(int r);
+	void setG(int g);
+	void setB(int b);
+	void setA(int a);
+	//background color getters
+	const int getR() const;
+	const int getG() const;
+	const int getB() const;
+	const int getA() const;
+
+	//Input Handling
+	const bool pollEvents();
+	const int keyPressEvent();
+	const int keyReleaseEvent();
+	const int mousePressEvent();
+	const int mouseReleaseEvent();
+	const int getMouseX() const;
+	const int getMouseY() const;
 
 	//Drawing
 	void clear(); // clears the window
 	void drawFullRect(Rect &rect);
-	void drawLineRect(Rect& rect);
+	void drawLineRect(Rect &rect);
 	void refresh(); // put at the end of your loop to present everything you have drawn
 };
 
